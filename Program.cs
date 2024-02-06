@@ -28,5 +28,8 @@ switch (operation)
     case "%":
         System.Console.WriteLine($"{numa} % {numb} = {numa %numb}");
             break;
+    default:
+        System.Console.WriteLine("Operation not found");
+            break;
 }
     
