@@ -11,7 +11,7 @@ string massage =
         :"The number b is greater than the number a";
 System.Console.WriteLine(massage);
 
-switch (operation)
+/*switch (operation)
 {
     case "+":
         System.Console.WriteLine($"{numa} + {numb} = {numa +numb}");
@@ -31,5 +31,15 @@ switch (operation)
     default:
         System.Console.WriteLine("Operation not found");
             break;
-}
-    
+}*/
+
+string result = operation switch
+{
+    "+" => $"{numa} + {numb} = {numa +numb}",
+    "-" => $"{numa} - {numb} = {numa -numb}",
+    "*" => $"{numa} * {numb} = {numa *numb}",
+    "/" => $"{numa} / {numb} = {numa /numb}",
+    "%" => $"{numa} % {numb} = {numa %numb}",
+    _   => "Operation not found!"
+};
+System.Console.WriteLine(result);
