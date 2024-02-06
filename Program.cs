@@ -43,3 +43,19 @@ string result = operation switch
     _   => "Operation not found!"
 };
 System.Console.WriteLine(result);
+
+int number = 0;
+while(number <= numa)
+{
+    System.Console.WriteLine(number);
+    number = number + 2;
+}
+
+for(int i = 0; i < 10; i++)
+{
+    for(int j = 0; j < 10; j++)
+    {
+        System.Console.WriteLine($" {i} * {j} = {i*j}");
+    }
+    System.Console.WriteLine("\n");
+}
