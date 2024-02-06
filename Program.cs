@@ -1,7 +1,32 @@
-﻿System.Console.WriteLine("Enter number a: ");
-var numa = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Enter number b: ");
+﻿System.Console.Write("Enter number a: ");
+int numa = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("Enter operator: (+,-,*,/,%)");
+string operation = Console.ReadLine() ;
+System.Console.Write("Enter number b: ");
 int numb = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine($" number a is greater then number b {numa > numb}");
-System.Console.WriteLine($" number a is less then number b {numa < numb}");
-System.Console.WriteLine($" number a is equal then number b {numa == numb}");
+
+string massage =
+    numa >= numb
+        ?"The number a is greater than or equal to the number b"
+        :"The number b is greater than the number a";
+System.Console.WriteLine(massage);
+
+switch (operation)
+{
+    case "+":
+        System.Console.WriteLine($"{numa} + {numb} = {numa +numb}");
+            break;
+    case "-":
+        System.Console.WriteLine($"{numa} - {numb} = {numa -numb}");
+            break;
+    case "*":
+        System.Console.WriteLine($"{numa} * {numb} = {numa *numb}");
+            break;
+    case "/":
+        System.Console.WriteLine($"{numa} / {numb} = {numa /numb}");
+            break;
+    case "%":
+        System.Console.WriteLine($"{numa} % {numb} = {numa %numb}");
+            break;
+}
+    
